@@ -1,0 +1,1868 @@
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+//필요한것 : 장바구니, 크롤링
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function Album() {
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <AppBar position="relative" />
+      <Box
+        sx={{
+          bgcolor: 'background.paper',
+          pt: 8,
+          pb: 6,
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            KREAM Pulse
+          </Typography>
+          <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            내가 찾는 브랜드제품을 한눈에 파악 KREAM Pulse를 만나보세요
+          </Typography>
+
+          <Stack
+            sx={{ pt: 4 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+            <Button variant="contained" style={{ backgroundColor: '#F6F2EE', color: 'black' }}>
+              나이키
+            </Button>
+            <Button variant="contained" style={{ backgroundColor: '#F6F2EE', color: 'black' }}>
+              조던
+            </Button>
+            <Button variant="contained" style={{ backgroundColor: '#F6F2EE', color: 'black' }}>
+              아디다스
+            </Button>
+            <Button variant="contained" style={{ backgroundColor: '#F6F2EE', color: 'black' }}>
+              뉴발란스
+            </Button>
+            <Button variant="contained" style={{ backgroundColor: '#F6F2EE', color: 'black' }}>
+              아식스
+            </Button>
+          </Stack>
+
+          <Stack
+            sx={{ pt: 4 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+            <Button variant="outlined">모든 브랜드 열기</Button>
+          </Stack>
+        </Container>
+
+        <Container sx={{ py: 8 }} maxWidth="md">
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <CardMedia
+                  component="div"
+                  sx={{ pt: '56.25%' }}
+                  image="https://static.shoeprize.com/open_raffle/main_carousel/100171/BQ4422-600-shoeprize-JORDAN-1-HIGH-85-VARSITY-RED-18740-1676526626172.jpg"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    조던
+                  </Typography>
+                  <Typography>
+                    조던 1 레트로 하이 OG 레이저
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" style={{ backgroundColor: 'white', color: 'green' }}>
+                    132.000원
+                  </Button>
+                  <Button size="small" style={{ backgroundColor: 'green', color: 'white' }}>
+                    +3.2%
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <CardMedia
+                  component="div"
+                  sx={{ pt: '56.25%' }}
+                  image=" "
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    뉴발란스
+                  </Typography>
+                  <Typography>
+                    뉴발란스 725 네이비
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" style={{ backgroundColor: 'white', color: 'red' }}>
+                    142.000원
+                  </Button>
+                  <Button size="small" style={{ backgroundColor: 'red', color: 'white' }}>
+                    -1.2%
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <CardMedia
+                  component="div"
+                  sx={{ pt: '56.25%' }}
+                  image="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2F736x%2F35%2F1e%2F4a%2F351e4a6eec07cb14af0d8c33b7e923fc.jpg&type=a340"
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    아디다스
+                  </Typography>
+                  <Typography>
+                  Adidas Gazelle Bold Cream White Collegiate Green
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" style={{ backgroundColor: 'white', color: 'green' }}>
+                    197.000원
+                  </Button>
+                  <Button size="small" style={{ backgroundColor: 'green', color: 'white' }}>
+                    +24.7%
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
+
+        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+          <Typography variant="h6" align="center" gutterBottom>
+            KREAM Pulse
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="text.secondary"
+            component="p"
+          >
+            한눈에 알아볼수있는 가격비교
+          </Typography>
+        </Box>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+
+
+
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+const Home = () => <h2>Home</h2>;
+const Mens = () => <h2>Mens</h2>;
+const Womens = () => <h2>Womens</h2>;
+const Tops = () => <h2>Tops</h2>;
+const Bottoms = () => <h2>Bottoms</h2>;
+const Shoes = () => <h2>Shoes</h2>;
+
+function Menubar() {
+  return (
+    <Router>
+      <div className="Menubar">
+        <nav className="navbar bg-dark">
+          <div className="container-fluid">
+            <Link className="navbar-brand navbar-dark" to="/">
+              <strong>KREAM Pulse</strong>
+            </Link>
+          </div>
+        </nav>
+
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/"><strong>Home</strong></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/mens"><strong>남성</strong></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/womens"><strong>여성</strong></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/tops"><strong>상의</strong></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/bottoms"><strong>하의</strong></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/shoes"><strong>신발</strong></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <Route exact path="/" component={Home} />
+      <Route path="/mens" component={Mens} />
+      <Route path="/womens" component={Womens} />
+      <Route path="/tops" component={Tops} />
+      <Route path="/bottoms" component={Bottoms} />
+      <Route path="/shoes" component={Shoes} />
+      {/* Add routes for other components based on your requirements */}
+    </Router>
+  );
+}
+
+export default Menubar;
+
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+  
+
+
+//입력 예시 이미지
+//https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2F736x%2F35%2F1e%2F4a%2F351e4a6eec07cb14af0d8c33b7e923fc.jpg&type=a340
+//입력예시 이름
+//Gazelle Bold Cream White Collegiate Green
+//이미지 경로 우회방법 확인해보기
+//기존 메뉴 라우팅 방법 알아보기 useRef문제 해결
+
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function Album() {
+  const [containers, setContainers] = useState([]);
+  const [inputImage, setInputImage] = useState('');
+  const [inputName, setInputName] = useState('');
+  const [inputPrice, setInputPrice] = useState('');
+  const [inputPercent, setInputPercent] = useState('');
+  const [inputBrand, setInputBrand] = useState('');
+
+  const addContainer = () => {
+    if (
+      containers.length < 6 &&
+      inputImage.trim() !== '' &&
+      inputBrand.trim() !== '' &&
+      inputName.trim() !== '' &&
+      inputPrice.trim() !== '' &&
+      inputPercent.trim() !== ''
+    ) {
+      const newContainer = {
+        image: inputImage,
+        brand: inputBrand,
+        name: inputName,
+        price: inputPrice,
+        percent: inputPercent,
+      };
+      setContainers([...containers, newContainer]);
+      setInputImage('');
+      setInputBrand('');
+      setInputName('');
+      setInputPrice('');
+      setInputPercent('');
+    }
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <AppBar position="relative" />
+      <Box
+        sx={{
+          bgcolor: 'background.paper',
+          pt: 8,
+          pb: 6,
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            KREAM Pulse
+          </Typography>
+          <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            내가 찾는 브랜드제품을 한눈에 파악 KREAM Pulse를 만나보세요
+          </Typography>
+          
+
+
+          
+          <Stack
+            sx={{ pt: 4 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+
+            <input
+              type="text"
+              value={inputImage}
+              onChange={(e) => setInputImage(e.target.value)}
+              placeholder="이미지 경로 입력"
+            />
+
+            <input
+              type="text"
+              value={inputBrand}
+              onChange={(e) => setInputBrand(e.target.value)}
+              placeholder="브랜드 입력"
+            />
+
+            <input
+              type="text"
+              value={inputName}
+              onChange={(e) => setInputName(e.target.value)}
+              placeholder="이름 입력"
+            />
+
+            <input
+              type="text"
+              value={inputPrice}
+              onChange={(e) => setInputPrice(e.target.value)}
+              placeholder="가격 입력"
+            />
+
+            <input
+              type="text"
+              value={inputPercent}
+              onChange={(e) => setInputPercent(e.target.value)}
+              placeholder="퍼센트 입력"
+            />
+
+            <Button variant="contained" onClick={addContainer}>
+              추가
+            </Button>
+          </Stack>
+        </Container>
+
+
+
+
+        <Container sx={{ py: 8 }} maxWidth="md">
+          <Grid container spacing={4}>
+            {containers.map((content, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <CardMedia
+                    component="div"
+                    sx={{ pt: '56.25%' }}
+                    image={content.image}
+                  />
+                
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {content.brand}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {content.name}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2">
+                    {parseInt(content.price).toLocaleString('en-US')}원
+                      <span style={{
+                        color: 'white',
+                        backgroundColor: content.percent.includes('-') ? 'rgb(239, 98, 83)' : 'rgb(65, 185, 121)',
+                        padding: '0.2em 0.5em',
+                        borderRadius: '0.3em'
+                      }}>
+                        {`${content.percent}%`}
+                      </span>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+
+
+        <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+          <Typography variant="h6" align="center" gutterBottom>
+            KREAM Pulse
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="text.secondary"
+            component="p"
+          >
+            한눈에 알아볼 수 있는 가격비교
+          </Typography>
+        </Box>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+
+// 로그인창 코드구현
+// mui meterial 설치후 import 해야됩니다.
+// npm install @mui/material @emotion/react @emotion/styled
+
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
+const theme = createTheme();
+
+export default function SignIn() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('아이디'),
+      password: data.get('비밀번호'),
+    });
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            로그인
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="아이디 저장"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign In
+            </Button>
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  아이디/비밀번호 찾기
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="#" variant="body2">
+                  {"회원가입"}
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Container>
+    </ThemeProvider>
+  );
+}
+
+
+import React from 'react';
+import guideData from './Guidedata.json';
+
+const Guide = () => {
+  return (
+    <div>
+      <h2 className="Guide-title"><strong> 구매 Guide & Tips </strong></h2>
+      <ul className="Guide-list">
+        {guideData.map((model, index) => (
+          <li key={index} className="Guide-item">
+            <div className="Guide-card">
+              <a href={model.link}>
+                <div className="Guide-image-container">
+                  <img
+                    src={require(`${model.imageUrl}`)}
+                    alt={model.Guide}
+                    className="Guide-image"
+                  />
+                </div>
+                <div className="Guide-details">
+                  <p className="Guide-name"><strong>{model.Guide}</strong></p>
+                </div>
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Guide;
+
+
+
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './Menubar.css';
+import arlam from './images/icon/arlam.png';
+import mypage from './images/icon/mypage.png';
+
+
+function Menubar() {
+  return (
+    <div className="Menubar">
+      <nav className="navbar">
+        <div className="container-fluid">
+          <a className="navbar-brand navbar" href="/">
+            <strong>Edit X</strong>
+          </a>
+          <img src={arlam} alt="Icon" className="arlam-icon" /> 
+          <img src={mypage} alt="Icon" className="mypage-icon" />
+        </div>
+      </nav>
+
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" href="/">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/myfavorite">나의 관심상품</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/shoes">슈즈</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/tops">의류</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/magazine">Magazine</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/newopen">출시일정</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+}
+
+export default Menubar;
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import MainPage from './MainPage';
+import Menubar from './Menubar';
+import Guide from './Guide';
+import LowBanner from './Lowbanner';
+
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <div>
+     
+      <Menubar />
+      <MainPage />
+      <Guide />
+      <LowBanner />
+    </div>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useEffect } from 'react';
+import './MyFavorite.css';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function MyFavorite() {
+  const [containers, setContainers] = useState([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch('/data.json')
+      .then((response) => response.json())
+      .then((data) => {
+        if (isMounted) {
+          setContainers(data);
+        }
+      })
+      .catch((error) => console.error('데이터 불러오기 에러:', error));
+
+    return () => {
+      isMounted = false;
+      setContainers([]);
+    };
+  }, []);
+
+  const getTextColor = (gapprice) => {
+    if (gapprice > 0) {
+      return 'positive';
+    } else if (gapprice < 0) {
+      return 'negative';
+    } else {
+      return 'zero';
+    }
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+        <Container sx={{ py: 8, display: 'flex', flexDirection: 'column', overflowX: 'auto' }} maxWidth="md">
+          <Typography variant="h4" component="h2" gutterBottom>
+            나의 아이템
+          </Typography>
+          <Grid container spacing={4} wrap="nowrap">
+            {containers.map((content, index) => {
+              const gapprice = parseInt(content.price) - parseInt(content.pastprice);
+
+              return (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardMedia
+                      component="div"
+                      sx={{ pt: '56.25%' }}
+                      image={content.image}
+                    />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography
+                        gutterBottom
+                        variant="body1"
+                        component="h2"
+                        sx={{
+                          alignItems: 'center',
+                          color: '#333',
+                          display: 'flex',
+                          fontSize: '13px',
+                          fontWeight: '700',
+                          letterSpacing: '-.07px',
+                          lineHeight: '16px',
+                          marginBottom: '2px',
+                        }}
+                      >
+                        {content.brand} {content.name}
+                      </Typography>
+                      <Typography gutterBottom variant="body1" component="div">
+                        <div>{parseInt(content.price).toLocaleString('en-US')}원</div>
+                        <div>
+                          <span className={getTextColor(gapprice)} style={{ fontSize: '12px' }}>
+                            {gapprice > 0 ? `▲${gapprice.toLocaleString('en-US')} (+${content.percent}%)` : gapprice < 0 ? `▼${Math.abs(gapprice).toLocaleString('en-US')} (${content.percent}%)` : `${gapprice.toLocaleString('en-US')} (${content.percent}%)`}
+                          </span>
+                        </div>
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+
+
+import React, { useState, useEffect } from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import SwipeableViews from 'react-swipeable-views';
+import Button from '@mui/material/Button';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function MyFavorite() {
+  const [containers, setContainers] = useState([]);
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch('/data.json')
+      .then((response) => response.json())
+      .then((data) => {
+        if (isMounted) {
+          setContainers(data);
+        }
+      })
+      .catch((error) => console.error('데이터 불러오기 에러:', error));
+
+    return () => {
+      isMounted = false;
+      setContainers([]);
+    };
+  }, []);
+
+  const getTextColor = (gapprice) => {
+    if (gapprice > 0) {
+      return 'positive';
+    } else if (gapprice < 0) {
+      return 'negative';
+    } else {
+      return 'zero';
+    }
+  };
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % containers.length);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => (prevActiveStep - 1 + containers.length) % containers.length);
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+        <Container sx={{ py: 8, display: 'flex', flexDirection: 'column', overflowX: 'auto' }} maxWidth="md">
+          <Typography variant="h4" component="h2" gutterBottom>
+            나의 아이템
+          </Typography>
+          <SwipeableViews index={activeStep}>
+            {containers.map((content, index) => {
+              const gapprice = parseInt(content.price) - parseInt(content.pastprice);
+
+              return (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardMedia
+                      component="div"
+                      sx={{ pt: '56.25%' }}
+                      image={content.image}
+                    />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography
+                        gutterBottom
+                        variant="body1"
+                        component="h2"
+                        sx={{
+                          alignItems: 'center',
+                          color: '#333',
+                          display: 'flex',
+                          fontSize: '13px',
+                          fontWeight: '700',
+                          letterSpacing: '-.07px',
+                          lineHeight: '16px',
+                          marginBottom: '2px',
+                        }}
+                      >
+                        {content.brand} {content.name}
+                      </Typography>
+                      <Typography gutterBottom variant="body1" component="div">
+                        <div>{parseInt(content.price).toLocaleString('en-US')}원</div>
+                        <div>
+                          <span className={getTextColor(gapprice)} style={{ fontSize: '12px' }}>
+                            {gapprice > 0 ? `▲${gapprice.toLocaleString('en-US')} (+${content.percent}%)` : gapprice < 0 ? `▼${Math.abs(gapprice).toLocaleString('en-US')} (${content.percent}%)` : `${gapprice.toLocaleString('en-US')} (${content.percent}%)`}
+                          </span>
+                        </div>
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
+          </SwipeableViews>
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+            <Button onClick={handleBack}>이전</Button>
+            <Button onClick={handleNext}>다음</Button>
+          </Box>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
+import React, { useState, useEffect } from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import SwipeableViews from 'react-swipeable-views';
+import './MyFavorite.css';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function MyFavorite() {
+  const [containers, setContainers] = useState([]);
+  const itemsPerPage = 5;
+
+  useEffect(() => {
+    fetch('/data.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setContainers(data);
+      })
+      .catch((error) => console.error('데이터 불러오기 에러:', error));
+  }, []);
+
+  const getTextColor = (gapprice) => {
+    if (gapprice > 0) {
+      return 'positive';
+    } else if (gapprice < 0) {
+      return 'negative';
+    } else {
+      return 'zero';
+    }
+  };
+
+  const renderItems = () => {
+    const items = [];
+    for (let i = 0; i < containers.length; i += itemsPerPage) {
+      items.push(
+        <div key={i}>
+          <Grid container spacing={2}>
+            {containers.slice(i, i + itemsPerPage).map((content, index) => {
+              const gapprice = parseInt(content.price) - parseInt(content.pastprice);
+              return (
+                <Grid item xs={12} sm={6} md={2} key={index}>
+                  <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <CardMedia component="div" sx={{ pt: '56.25%' }} image={content.image} />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography
+                        gutterBottom
+                        variant="body1"
+                        component="h2"
+                        sx={{
+                          alignItems: 'center',
+                          color: '#333',
+                          display: 'flex',
+                          fontSize: '13px',
+                          fontWeight: '700',
+                          letterSpacing: '-.07px',
+                          lineHeight: '16px',
+                          marginBottom: '2px',
+                        }}
+                      >
+                        {content.brand} {content.name}
+                      </Typography>
+                      <Typography gutterBottom variant="body1" component="div">
+                        <div>{parseInt(content.price).toLocaleString('en-US')}원</div>
+                        <div>
+                          <span className={getTextColor(gapprice)} style={{ fontSize: '12px' }}>
+                            {gapprice > 0
+                              ? `▲${gapprice.toLocaleString('en-US')} (+${content.percent}%)`
+                              : gapprice < 0
+                              ? `▼${Math.abs(gapprice).toLocaleString('en-US')} (${content.percent}%)`
+                              : `${gapprice.toLocaleString('en-US')} (${content.percent}%)`}
+                          </span>
+                        </div>
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </div>
+      );
+    }
+    return items;
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+        <Container sx={{ py: 8, display: 'flex', flexDirection: 'column', overflowX: 'auto' }} maxWidth="md">
+          <Typography variant="h4" component="h2" gutterBottom>
+            나의 아이템
+          </Typography>
+          <SwipeableViews enableMouseEvents>
+            {renderItems()}
+          </SwipeableViews>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+
+
+
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useEffect } from 'react';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function MyFavorit() {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  // 가격 포매팅 함수
+  function formatPrice(price) {
+      return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  // 초기 박스 데이터 로드
+  useEffect(() => {
+      fetch('http://localhost:8080/pageinitial', {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      })
+          .then(response => response.json())
+          .then(data => {
+              setBoxes(data);
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+  }, []);
+
+  const fetchAndAddBox = () => {
+      // 박스 추가 로직...
+      fetch(`http://localhost:8080/Is_exsist?url=${inputValue}`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      })
+          .then(response => response.json())
+          .then(data => {
+              if (data === false) {
+                  return fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+                      method: 'GET',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      },
+                  })
+                      .then(response => response.json());
+              } else {
+                  throw new Error('URL already exists');
+              }
+          })
+          .then(data => {
+              if (data !== 'false' && boxes.length < 6) {
+                  setBoxes(currentBoxes => [...currentBoxes, data]);
+              }
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+          });
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+        <Container sx={{ py: 8, display: 'flex', flexDirection: 'column', overflowX: 'auto' }} maxWidth="md">
+          <Typography variant="h4" component="h2" gutterBottom>
+            나의 아이템
+          </Typography>
+          <Grid container spacing={4} wrap="nowrap">
+            {boxes.map((box, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <CardMedia
+                    component="div"
+                    sx={{ pt: '56.25%' }}
+                    image={box.imgsrc}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography
+                      gutterBottom
+                      variant="body1"
+                      component="h2"
+                      sx={{
+                        alignItems: 'center',
+                        color: '#333',
+                        display: 'flex',
+                        fontSize: '13px',
+                        fontWeight: '700',
+                        letterSpacing: '-.07px',
+                        lineHeight: '16px',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      {/* {box.brand}  */}
+                      {box.name}
+                    </Typography>
+                    <Typography gutterBottom variant="body1" component="h2">
+                      {parseInt(box.price).toLocaleString('en-US')}원
+                      {/* <span
+                        style={{
+                          color: 'white',
+                          backgroundColor: box.percent.includes('-')
+                            ? 'rgb(239, 98, 83)'
+                            : 'rgb(65, 185, 121)',
+                          padding: '0.1em 0.5em',
+                          borderRadius: '0.3em',
+                        }}
+                      >
+                        {`${box.percent}%`}
+                      </span> */}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+  return (
+    <div className="brand-model-container">
+      <h2 className="brand-title"><strong>다양한 브랜드의 제품들을 발견해보세요</strong></h2>
+      <ul className="brand-models-list">
+        {popularModelsData.map((model, index) => (
+          <li key={index} className="brand-item">
+            <div className="brand-card">
+              <a href={model.link} className="brand-link">
+                <div className="brand-image-container">
+                  <img
+                    src={model.imageUrl}
+                    alt={model.brand}
+                    className="brand-image"
+                  />
+                </div>
+                <div className="brand-details">
+                  <p className="brand-name"><strong>{model.brand}</strong></p>
+                </div>
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default BrandModel;
+
+
+
+
+여기 코드가 있어요 제가 코드를 하나더 보여드릴게요 
+
+
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useEffect } from 'react';
+import './ItemPage.css';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+export default function ItemPage() {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  useEffect(() => {
+    fetch('http://localhost:8080/pageinitial', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setBoxes(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  const fetchAndAddBox = () => {
+    fetch(`http://localhost:8080/Is_exsist?url=${inputValue}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data === false) {
+          return fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then(response => response.json());
+        } else {
+          throw new Error('URL already exists');
+        }
+      })
+      .then(data => {
+        if (data !== 'false' && boxes.length < 6) {
+          setBoxes(currentBoxes => [...currentBoxes, data]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+        <Container sx={{ py: 8, display: 'flex', flexDirection: 'column', overflowX: 'auto' }} maxWidth="md">
+        
+        
+        <h2 className="Item-title"><strong>나의 아이템</strong></h2>
+          
+          <Grid container spacing={4}>
+            {boxes.map((box, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index} className="Item-grid" >
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column',minWidth:'250px' }}>
+                  <CardMedia
+                    component="div"
+                    sx={{ pt: '56.25%' }}
+                    image={box.imgsrc}
+                  />
+                  <CardContent sx={{ flexGrow: 1,minHeight:'180px' }}>
+                    <Typography
+                      gutterBottom
+                      variant="body1"
+                      component="h2"
+                      sx={{
+                        alignItems: 'center',
+                        color: '#333',
+                        display: 'flex',
+                        fontSize: '13px',
+                        fontWeight: '700',
+                        letterSpacing: '-.07px',
+                        lineHeight: '16px',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      {box.name}
+                    </Typography>
+                    <Typography gutterBottom variant="body1" component="h2">
+                      {parseInt(box.price).toLocaleString('en-US')}원
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+
+import React, { useState, useEffect } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './ItemPage.css';
+import Banner_item from './Banner_item';
+import charticon from './images/icon/chart.png'
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+const ItemPage = () => {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  useEffect(() => {
+    fetch('http://localhost:8080/pageinitial', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setBoxes(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  const fetchAndAddBox = () => {
+    fetch(`http://localhost:8080/Is_exsist?url=${inputValue}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data === false) {
+          return fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then(response => response.json());
+        } else {
+          throw new Error('URL already exists');
+        }
+      })
+      .then(data => {
+        if (data !== 'false' && boxes.length < 6) {
+          setBoxes(currentBoxes => [...currentBoxes, data]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  return (
+    
+    <ThemeProvider theme={defaultTheme}>
+      <Banner_item/>
+      <div className="brand-model-container">
+        <ul className="brand-models-list">
+          {boxes.map((box, index) => (
+            <li key={index} className="brand-item">
+              <div className="brand-card">
+                <div className="brand-image-container">
+                  <img
+                    src={box.imgsrc}
+                    alt={box.name}
+                    className="brand-image"
+                  />
+                </div>
+                <div className="brand-details">
+                  <p className="brand-name"><strong>{box.name}</strong></p>
+                  <p className="brand-price">{parseInt(box.price).toLocaleString('en-US')}원</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ThemeProvider>
+  );
+};
+
+export default ItemPage;
+
+
+import React, { useState, useEffect } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './ItemPage.css';
+import Banner_item from './Banner_item';
+import charticon from './images/icon/chart.png'
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import ModalData from './modal';
+
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+const ItemPage = () => {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+  const [openModal, setOpenModal] = useState(false);
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  useEffect(() => {
+    fetch('http://localhost:8080/pageinitial', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setBoxes(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  const fetchAndAddBox = () => {
+    fetch(`http://localhost:8080/Is_exsist?url=${inputValue}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data === false) {
+          return fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then(response => response.json());
+        } else {
+          throw new Error('URL already exists');
+        }
+      })
+      .then(data => {
+        if (data !== 'false' && boxes.length < 6) {
+          setBoxes(currentBoxes => [...currentBoxes, data]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  const handleChartIconClick = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Banner_item />
+      <div className="brand-model-container">
+        <ul className="brand-models-list">
+          {boxes.map((box, index) => (
+            <li key={index} className="brand-item">
+              <div className="brand-card">
+                <div className="brand-image-container">
+                  <img
+                    src={box.imgsrc}
+                    alt={box.name}
+                    className="brand-image"
+                  />
+                </div>
+                <div className="brand-details">
+                  <p className="brand-name">
+                    <strong>{box.name}</strong>
+                    <span className="chart-icon-wrapper" onClick={handleChartIconClick}>
+                      <img src={charticon} alt="Chart" className="chart-icon" />
+                    </span>
+                  </p>
+                  <p className="brand-price">{parseInt(box.price).toLocaleString('en-US')}원</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Modal
+        open={openModal}
+        onClose={handleCloseModal}
+        aria-labelledby="chart-modal-title"
+        aria-describedby="chart-modal-description"
+        
+      >
+        <Box sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: 400, 
+          height:400,
+          bgcolor: 'background.paper',
+          border: '2px solid #000',
+          boxShadow: 24,
+          p: 4,
+        }}>
+          <ModalData/>
+
+        
+        </Box>
+      </Modal>
+    </ThemeProvider>
+  );
+};
+
+export default ItemPage;
+
+
+import Banner_PlusPage from "./Banner_Pluspage";
+import React, { useState, useEffect } from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+function PlusPage() {
+    const [boxes, setBoxes] = useState([]);
+    const [inputValue, setInputValue] = useState('');
+
+    function formatPrice(price) {
+        return new Intl.NumberFormat('ko-KR').format(price);
+    }
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+        console.log(inputValue);
+    };
+
+    useEffect(() => {
+        fetch('http://localhost:8080/Crawling-adress', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => {
+                console.log(response)
+                response.json()
+            })
+            .then(data => {
+                setBoxes(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }, []);
+
+    const handleAddBox = () => {
+        console.log('Added Box:', inputValue);
+        fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => {
+                console.log(response)
+                response.json()
+            })
+            .then(data => {
+                setBoxes(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    };
+
+    return (
+        <div>
+            <Banner_PlusPage/>
+            <TextField fullWidth label="URL" id="URL" value={inputValue} onChange={handleInputChange} />
+            <Button variant="contained" onClick={handleAddBox}>추가하기</Button>
+        </div>
+    );
+}
+
+export default PlusPage;
+
+
+
+import React, { useState, useEffect } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './ItemPage.css';
+import Banner_StylePage from './Banner_style';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+const OuterPage = () => {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  useEffect(() => {
+    fetch('http://localhost:8080/style', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        fetchImagesAndAddBoxes(data); // 이미지 URL 리스트를 전달
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  const fetchImagesAndAddBoxes = (imageUrls) => {
+  Promise.all(imageUrls.map(url =>
+    fetch(url) // 이미지 URL에 직접 fetch 요청
+      .then(response => response.blob())
+      .then(blob => {
+        const imageFile = URL.createObjectURL(blob);
+        return { imgsrc: imageFile }; // 이미지 파일로 박스 데이터 생성
+      })
+      .catch(error => {
+        console.error('Error fetching image:', error);
+        return null;
+      })
+  ))
+  .then(boxesData => {
+    // Filter out any failed image fetches
+    const validBoxes = boxesData.filter(box => box !== null);
+    setBoxes(currentBoxes => [...currentBoxes, ...validBoxes]);
+  });
+};
+
+  return (
+    
+    <ThemeProvider theme={defaultTheme}>
+      <Banner_StylePage/>
+      <div className="brand-model-container">
+        <ul className="brand-models-list">
+          {boxes.map((box, index) => (
+            <li key={index} className="brand-item">
+              <div className="brand-card">
+                <div className="brand-image-container">
+                  <img
+                    src={box.imgsrc}
+                    alt={box.name}
+                    className="brand-image"
+                  />
+                </div>
+                <div className="brand-details">
+                  <p className="brand-name"><strong>{box.name}</strong></p>
+                  <p className="brand-price">{parseInt(box.price).toLocaleString('en-US')}원</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ThemeProvider>
+  );
+};
+
+export default OuterPage;
+import React, { useState, useEffect } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './ItemPage.css';
+import Banner_StylePage from './Banner_style';
+
+const defaultTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+    secondary: {
+      main: '#F6F2EE',
+    },
+  },
+});
+
+const OuterPage = () => {
+  const [boxes, setBoxes] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat('ko-KR').format(price);
+  }
+
+  useEffect(() => {
+    fetch('http://localhost:8080/pageinitial', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setBoxes(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }, []);
+
+  const fetchAndAddBox = () => {
+    fetch(`http://localhost:8080/Is_exsist?url=${inputValue}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data === false) {
+          return fetch(`http://localhost:8080/Crawling-adress?url=${inputValue}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+            .then(response => response.json());
+        } else {
+          throw new Error('URL already exists');
+        }
+      })
+      .then(data => {
+        if (data !== 'false' && boxes.length < 6) {
+          setBoxes(currentBoxes => [...currentBoxes, data]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <div className="brand-model-container">
+        <Banner_StylePage/>
+        <ul className="brand-models-list">
+          {boxes.map((box, index) => (
+            <li key={index} className="brand-item">
+              <div className="brand-card">
+                <div className="brand-image-container">
+                  <img
+                    src={box.imgsrc}
+                    alt={box.name}
+                    className="brand-image"
+                  />
+                </div>
+                <div className="brand-details">
+                  <p className="brand-name"><strong>{box.name}</strong></p>
+                  <p className="brand-price">{parseInt(box.price).toLocaleString('en-US')}원</p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ThemeProvider>
+  );
+};
+
+export default OuterPage;

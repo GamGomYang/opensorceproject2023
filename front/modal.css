@@ -1,0 +1,15 @@
+.scroll-container {
+  height: 300px; /* 모달에 적절한 높이를 지정하세요 */
+  overflow-y: auto; /* 세로 스크롤을 허용하여 모달 내부에 스크롤이 나타나도록 설정 */
+}
+
+.custom-scrollbar {
+  list-style: none;
+  padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;}
+

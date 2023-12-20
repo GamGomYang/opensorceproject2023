@@ -1,0 +1,60 @@
+.popular-models-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-left : 15px;
+    margin-top :10px;
+
+}
+
+.model-item {
+    box-sizing: border-box;
+    width: 21%;
+    margin-right: 1.25%; 
+    margin-left: 1.25%; 
+    margin-bottom: 20px;
+}
+
+.model-card {
+    background-color: #F6F2EE;
+    width: 210px; 
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.model-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.model-details {
+    padding: 10px;
+    text-align: left;
+}
+
+.model-brand {
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.model-model {
+    font-size:13px;
+    color: black;
+}
+
+.model-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 22px;
+    padding-left: 30px;
+    text-align: left;
+}

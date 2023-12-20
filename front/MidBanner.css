@@ -1,0 +1,14 @@
+.mid-banner {
+    display: flex;
+    justify-content: center;   }
+  
+  .mid-banner img {
+    max-width: auto;
+    height: 380px;
+    margin-right: 20px; 
+    margin-bottom: 80px
+  }
+  
+  .mid-banner img:last-child {
+    margin-right: 0; 
+  }

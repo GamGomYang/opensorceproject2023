@@ -1,0 +1,51 @@
+.Guide-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.Guide-item {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.Guide-card {
+    background-color: white;
+    width: 80%; 
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.Guide-image {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.Guide-details {
+    padding: 10px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.Guide-name {
+    margin-bottom: 5px;
+    font-size: 14px; 
+    font-weight: bold; 
+}
+
+.Guide-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.Guide-title {
+    font-size: 24px; 
+    padding-left: 25px;
+    margin-top: -30px;
+}

@@ -1,0 +1,43 @@
+
+.nav-item a{
+    font-size : 18px;
+    border : 1px ;
+    padding : 5px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    line-height: 1;
+}
+
+
+.navbar-nav {
+    display: flex;
+     justify-content: space-around;
+    color: rgb(0, 0, 0);
+    width: 100%;
+  }
+
+  .nav-item {
+    flex-grow: 1;
+    text-align: center;
+
+  }
+
+  .arlam-icon {
+    position: absolute;
+    right: 0;
+    height: 20px; 
+    width: 20px; 
+    margin-right : 110px;
+  }
+
+  .mypage-icon {
+    position: absolute;
+    right: 0;
+    height: 28px; 
+    width: 31px; 
+    margin-right : 55px;
+    margin-bottom: 4px;
+  }
+
+
+ 
